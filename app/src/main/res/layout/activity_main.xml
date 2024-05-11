@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="?attr/colorPrimary"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView style="@style/Logo" />
+
+        <TextView style="@style/SubLogo" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bg_button"
+        android:backgroundTint="?attr/colorMain"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/subtitle_image"
+            style="@style/Subtitle"
+            android:text="@string/sub_image_editor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_image_rotate"/>
+
+            <TextView
+                android:id="@+id/tv_image_resize"
+                style="@style/Button"
+                android:text="@string/label_image"
+                app:drawableTopCompat="@drawable/ic_image_resize"
+                app:layout_constraintEnd_toStartOf="@+id/tv_image_rotate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtitle_image"
+                app:layout_constraintBottom_toTopOf="@+id/subtitle_audio"/>
+
+            <TextView
+                android:id="@+id/tv_image_rotate"
+                style="@style/Button"
+                android:text="@string/label_rotate"
+                app:drawableTopCompat="@drawable/ic_image_rotate"
+                app:layout_constraintEnd_toStartOf="@id/tv_image_flip"
+                app:layout_constraintStart_toEndOf="@+id/tv_image_resize"
+                app:layout_constraintTop_toBottomOf="@+id/subtitle_image"
+                app:layout_constraintBottom_toTopOf="@+id/subtitle_audio"/>
+
+            <TextView
+                android:id="@+id/tv_image_flip"
+                style="@style/Button"
+                android:text="@string/label_flip"
+                app:drawableTopCompat="@drawable/ic_image_flip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_image_rotate"
+                app:layout_constraintTop_toBottomOf="@+id/subtitle_image"
+                app:layout_constraintBottom_toTopOf="@+id/subtitle_audio"/>
+
+
+        <TextView
+            android:id="@+id/subtitle_audio"
+            style="@style/Subtitle"
+            android:text="@string/sub_audio_editor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image_rotate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_audio_compress"/>
+
+        <TextView
+            android:id="@+id/tv_audio_compress"
+            style="@style/Button"
+            android:layout_gravity="center"
+            android:text="@string/label_compress"
+            app:drawableTopCompat="@drawable/ic_audio_compress"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_audio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:textAlignment="center" />
+</LinearLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Medit" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorMain">@color/secondary_light</item>
+    </style>
+
+    <style name="Theme.Medit" parent="Base.Theme.Medit" />
+
+    <style name="Logo" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:drawableTint">?attr/colorOnPrimary</item>
+        <item name="drawableTopCompat">@drawable/medit_logo</item>
+    </style>
+
+    <style name="SubLogo" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:letterSpacing">0.5</item>
+        <item name="android:text">@string/app_detail</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Subtitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="android:drawableTint">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Input" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+</resources>
